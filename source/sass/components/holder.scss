@@ -1,0 +1,79 @@
+.holder {
+  width: 320px;
+  border-top: 1px solid #e5e5e5;
+  margin: 0 auto;
+  margin-bottom: 2px;
+
+  &:last-child {
+    border-bottom: 1px solid #e5e5e5;
+  }
+}
+
+.holder__photo {
+  display: block;
+  width: 280px;
+  height: 280px;
+  margin: 0 auto;
+  margin-top: 24px;
+}
+
+.holder__info {
+  width: 280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+
+.holder__quote {
+  margin: 0;
+  margin-top: 15px;
+  margin-bottom: 2px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 150%;
+  align-items: center;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.holder__autor {
+  margin: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  align-items: center;
+  color: #333333;
+  margin-bottom: 11px;
+}
+
+.holder__liked {
+  margin-bottom: 25px;
+  display: flex;
+}
+
+.holder__button {
+  padding: 0;
+  width: 23px;
+  height: 21px;
+  background-image: url("../img/icon-like.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  background-color: transparent;
+  margin-right: 14px;
+  cursor: pointer;
+}
+
+.holder__counter {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: #000000;
+  align-items: flex-end;
+  padding-top: 3px;
+}

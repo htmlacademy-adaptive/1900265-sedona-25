@@ -1,1 +1,23 @@
-// Начните писать стили здесь
+@import "./global/global.scss";
+@import "./global/fonts.scss";
+@import "./components/visually-hidden.scss";
+@import "./components/header.scss";
+@import "./components/body.scss";
+@import "./components/nav.scss";
+@import "./components/intro.scss";
+@import "./components/advantages.scss";
+@import "./components/card.scss";
+@import "./components/search.scss";
+@import "./components/social.scss";
+@import "./components/copyright.scss";
+@import "./components/map.scss";
+@import "./components/gallery.scss";
+@import "./components/holder.scss";
+@import "./components/presentation.scss";
+@import "./components/form.scss";
+@import "./components/user-data.scss";
+@import "./components/user-contacts.scss";
+@import "./components/effects.scss";
+@import "./components/showplaces.scss";
+@import "./components/emotions.scss";
+@import "./components/control.scss";

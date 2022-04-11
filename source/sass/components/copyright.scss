@@ -1,0 +1,33 @@
+.copyright {
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+
+  svg {
+    &:hover {
+      fill: #81b3d2;
+    }
+
+    &:active {
+      fill: #b3b3b3;
+    }
+  }
+}
+
+.copyright__text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: #000000;
+  padding-right: 15px;
+
+  &:hover {
+    color: #81b3d2;
+  }
+
+  &:active {
+    color: #b3b3b3;
+  }
+}

@@ -1,0 +1,23 @@
+.showplaces {
+  margin-bottom: 0;
+}
+
+.showplaces__title {
+  left: 0;
+}
+
+.showplaces__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.showplaces__item {
+  height: 46px;
+  margin-bottom: 16px;
+  padding-left: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,24 @@
+.emotions {
+  margin-bottom: 16px;
+  padding-left: 20px;
+}
+
+.emotions__title {
+  left: 53px;
+}
+
+.emotions__input {
+  width: 280px;
+  height: 150px;
+  padding: 0;
+  padding-top: 15px;
+  padding-left: 18px;
+
+  &::placeholder {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 144%;
+    color: rgba(0, 0, 0, 0.3);
+  }
+}
