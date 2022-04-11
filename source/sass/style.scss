@@ -1,1 +1,23 @@
-// Начните писать стили здесь
+@use "./global/global.scss";
+@use "./global/fonts.scss";
+@use "./components/visually-hidden.scss";
+@use "./components/header.scss";
+@use "./components/body.scss";
+@use "./components/nav.scss";
+@use "./components/intro.scss";
+@use "./components/advantages.scss";
+@use "./components/card.scss";
+@use "./components/search.scss";
+@use "./components/social.scss";
+@use "./components/copyright.scss";
+@use "./components/map.scss";
+@use "./components/gallery.scss";
+@use "./components/holder.scss";
+@use "./components/presentation.scss";
+@use "./components/form.scss";
+@use "./components/user-data.scss";
+@use "./components/user-contacts.scss";
+@use "./components/effects.scss";
+@use "./components/showplaces.scss";
+@use "./components/emotions.scss";
+@use "./components/control.scss";

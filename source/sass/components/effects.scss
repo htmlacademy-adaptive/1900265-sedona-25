@@ -1,0 +1,23 @@
+.effects {
+  padding-left: 20px;
+  padding-bottom: 25px;
+}
+
+.effects__title {
+  left: 43px;
+}
+
+.effects__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.effects__item {
+  height: 46px;
+  margin-bottom: 16px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
