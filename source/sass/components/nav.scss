@@ -4,20 +4,39 @@
   display: flex;
   justify-content: end;
   position: relative;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    display: block;
+    background-color: $white;
+    box-shadow: 0 4px 4 rgba(0, 0, 0, 0.25);
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1200px;
+  }
 }
 
 .nav__logo {
-  cursor: pointer;
   position: absolute;
   left: 67px;
+
+  @media (min-width: $tablet-width) {
+    left: 290px;
+    z-index: 10;
+  }
+
+  @media (min-width: $desktop-width) {
+    left: 508px;
+  }
 }
 
 .nav__toggle {
   margin: 17px;
+  margin-left: 0 auto;
   border: none;
   background-color: transparent;
   cursor: pointer;
-  margin-left: 0 auto;
 
   &:hover {
     fill-opacity: 0.6;
@@ -25,6 +44,10 @@
 
   &:active {
     fill-opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
   }
 }
 
@@ -34,27 +57,96 @@
   flex-direction: column;
   list-style: none;
   margin: 0;
+  padding: 0;
   position: absolute;
   z-index: 10;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    margin: 0 auto;
+    z-index: 0;
+    min-width: 768px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 1200px;
+  }
 }
 
 .nav__item {
   display: block;
   width: 320px;
   height: 55px;
-  background-color: #81b3d2;
+  background-color: $blue-base;
   box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
   text-align: center;
   padding-top: 16px;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    background-color: $white;
+    box-shadow: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 18px;
+    padding-left: 0;
+  }
+
+  &--main {
+    @media (min-width: $tablet-width) {
+      grid-column: 1 / 2;
+    }
+  }
+
+  &---catalog {
+    @media (min-width: $tablet-width) {
+      grid-column: 2 / 3;
+    }
+  }
+
+  &--form {
+    @media (min-width: $tablet-width) {
+      grid-column: 4 / 5;
+      padding-left: 5px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-left: 0;
+    }
+  }
+
+  &--academy {
+    @media (min-width: $tablet-width) {
+      grid-column: 5 / 6;
+      padding-left: 5px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-left: 0;
+    }
+  }
 }
 
 .nav__link {
-  font-style: normal;
-  font-weight: 700;
+  font-weight: $weight-bold;
   font-size: 18px;
   line-height: 144%;
   text-transform: uppercase;
-  color: #ffffff;
+  color: $white;
   margin: 0;
-  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 150%;
+    color: $black;
+  }
+
+  &--current {
+    @media (min-width: $tablet-width) {
+      color: #766357;
+    }
+  }
 }

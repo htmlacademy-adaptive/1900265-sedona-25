@@ -1,4 +1,16 @@
 .body {
-  margin: 0;
-  font-family: "PT Sans", sans-serif;
+  margin: 0 auto;
+  font-family: $base-font;
+  font-style: normal;
+  width: 320px;
+  background-color: $white;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1200px;
+  }
 }

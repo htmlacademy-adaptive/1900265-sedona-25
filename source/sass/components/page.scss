@@ -1,0 +1,14 @@
+.page {
+  margin: 0 auto;
+  width: 400px;
+  background-color: $grey-body;
+  padding: 0 40px;
+
+  @media (min-width: $tablet-width) {
+    width: 848px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1280px;
+  }
+}
