@@ -1,0 +1,9 @@
+.page {
+  @media (min-width: $desktop-width) {
+    margin: 0 auto;
+    width: 1280px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: $grey-body;
+  }
+}

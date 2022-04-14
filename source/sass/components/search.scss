@@ -5,49 +5,83 @@
   margin: 0 auto;
   margin-bottom: 49px;
   padding-top: 23px;
+  background-color: $white;
+
+  @media (min-width: $tablet-width) {
+    width: 461px;
+    padding-top: 34px;
+    margin-bottom: 59px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1200px;
+    margin-bottom: 0;
+  }
 }
 
 .search__title {
   margin-bottom: 5px;
-  color: #000000;
-  font-style: normal;
-  font-weight: 700;
+  color: $black;
+  font-weight: $weight-bold;
   font-size: 21px;
   line-height: 124%;
   text-transform: uppercase;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 87%;
+    margin-bottom: 19px;
+  }
 }
 
 .search__text {
-  color: #333333;
-  font-style: normal;
-  font-weight: 400;
+  color: $dark;
+  font-weight: $weight-normal;
   font-size: 14px;
   line-height: 150%;
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 32px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 380px;
+    margin-bottom: 47px;
+  }
 }
 
 .search__button {
   display: block;
   width: 284px;
   margin: 0 auto;
-  padding: 16px 49px;
-  background-color: #81b3d2;
-  color: #ffffff;
+  padding: 16px;
+  background-color: $blue-base;
+  color: $white;
   text-transform: uppercase;
-  font-weight: 700;
+  text-align: center;
+  font-weight: $weight-bold;
   font-size: 21px;
   line-height: 124%;
   cursor: pointer;
 
+  @media (min-width: $tablet-width) {
+    width: 458px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 66px;
+  }
+
   &:hover {
-    background-color: #669ec0;
+    background-color: $blue-hover;
   }
 
   &:active {
-    background-color: #5496bd;
-    color: rgba(255, 255, 255, 0.3);
+    background-color: $blue-active;
+    color: $active-font;
   }
 }
