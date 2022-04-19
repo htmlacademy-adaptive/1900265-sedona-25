@@ -1,5 +1,23 @@
+.user-contacts {
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+}
+
 .user-contacts__title {
   left: 40px;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: 0;
+    left: 26px;
+    text-align: start;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 3px;
+    left: 94px;
+  }
 }
 
 .user-contacts__phone {
@@ -16,12 +34,15 @@
   padding-left: 16px;
 
   &::placeholder {
-    font-style: normal;
-    font-weight: 700;
+    font-weight: $weight-bold;
     font-size: 18px;
     line-height: 144%;
     align-items: center;
-    color: rgba(0, 0, 0, 0.3);
+    color: $black-opacity;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 402px;
   }
 }
 
@@ -29,7 +50,7 @@
   display: block;
   width: 58px;
   height: 58px;
-  background-color: #e6e6e6;
+  background-color: $grey-icon;
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
@@ -42,5 +63,9 @@
 
   &--email {
     background-image: url("../img/icon-mail.svg");
+  }
+
+  @media (min-width: $tablet-width) {
+    right: 2px;
   }
 }

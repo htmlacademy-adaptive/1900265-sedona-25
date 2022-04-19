@@ -1,19 +1,11 @@
 .social {
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
     justify-content: space-between;
-    margin: 0 auto;
-    width: 768px;
-    min-height: 120px;
-    padding: 35px 60px;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 1200px;
-    padding: 37px 120px;
   }
 }
 
@@ -30,17 +22,46 @@
     margin-top: 38px;
 
     @media (min-width: $tablet-width) {
-      margin-top: 15px;
+      margin-top: 12px;
       margin-left: 0;
+      margin-right: 53px;
     }
 
     @media (min-width: $desktop-width) {
       margin-top: 10px;
+      margin-right: 130px;
     }
   }
 
-  &--inner-page {
+  &--catalog {
+    margin: 0 auto;
+    margin-bottom: 32px;
+
+    @media (min-width: $tablet-width) {
+      margin: 0;
+      margin-top: 12px;
+      margin-right: 48px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-right: 129px;
+    }
+  }
+
+  &--form {
+    margin: 0 auto;
     margin-top: 25px;
+    margin-bottom: 34px;
+
+    @media (min-width: $tablet-width) {
+      margin: 0;
+      margin-top: 12px;
+      margin-right: 48px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-right: 124px;
+    }
   }
 }
 

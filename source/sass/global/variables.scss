@@ -5,17 +5,25 @@ $mobile-width-only: 767px;
 
 //Colors
 $white: #ffffff;
+$white-opacity: rgba(255, 255, 255, 0.3);
 $black: #000000;
+$black-opacity: rgba(0, 0, 0, 0.3);
 $grey: #eeeeee;
-$grey-body: #f2f2f2;
+$grey-dark: #e5e5e5;
+$grey-icon: #e6e6e6;
+$grey-holder: #eaeaea;
+$grey-light: #f2f2f2;
+$grey-active: #d5d5d5;
+$grey-border: #d8d8d8;
 $dark: #333333;
+$dark-opacity: rgba(51, 51, 51, 0.6);
 $blue-base: #81b3d2;
 $blue-hover: #669ec0;
 $blue-active: #5496bd;
+$modal-shadow: rgba(0, 1, 1, 0.15);
 
 
 //шрифты
 $base-font: "PT Sans", sans-serif;
 $weight-normal: 400;
 $weight-bold: 700;
-$active-font: rgba(255, 255, 255, 0.3);

@@ -1,9 +1,35 @@
 .user-data {
   margin-bottom: 5px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 60px;
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 1px;
+      height: 338px;
+      background-color: $grey-border;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
 }
 
 .user-data__title {
-  left: 90px;
+  left: 89px;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: 0;
+    left: 90px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 3px;
+    left: 235px;
+  }
 }
 
 .user-data__input {
@@ -12,11 +38,14 @@
   padding-left: 14px;
 
   &::placeholder {
-    font-style: normal;
-    font-weight: 700;
+    font-weight: $weight-bold;
     font-size: 18px;
     line-height: 144%;
     align-items: center;
-    color: #000000;
+    color: $black;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 430px;
   }
 }

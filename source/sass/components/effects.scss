@@ -1,16 +1,51 @@
 .effects {
   padding-left: 20px;
   padding-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 960px;
+    padding-left: 77px;
+    padding-top: 48px;
+    padding-bottom: 50px;
+  }
 }
 
 .effects__title {
   left: 43px;
+
+  @media (min-width: $tablet-width) {
+    top: 2px;
+    left: -12px;
+    padding: 0 55px;
+  }
+
+  @media (min-width: $desktop-width) {
+    left: -47px;
+    padding-left: 100px;
+    padding-right: 70px;
+    min-width: 400px;
+  }
 }
 
 .effects__list {
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 924px;
+    margin-bottom: 0;
+  }
 }
 
 .effects__item {
@@ -19,5 +54,17 @@
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 296px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 308px;
+
+    &:last-child {
+      width: 300px;
+    }
   }
 }
