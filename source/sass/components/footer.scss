@@ -6,8 +6,11 @@
   }
 
   &--main {
+    height: 233px;
+
     @media (min-width: $tablet-width) {
       width: 768px;
+      height: 120px;
       min-height: 120px;
       padding: 35px 60px 15px 60px;
     }
@@ -19,8 +22,12 @@
   }
 
   &--catalog {
+    height: 233px;
+    padding-top: 25px;
+
     @media (min-width: $tablet-width) {
       width: 648px;
+      height: 120px;
       padding-top: 35px;
     }
 
@@ -31,6 +38,8 @@
   }
 
   &--form {
+    height: 233px;
+
     @media (min-width: $tablet-width) {
       width: 768px;
       height: 120px;

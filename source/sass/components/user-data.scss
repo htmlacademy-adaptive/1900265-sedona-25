@@ -18,6 +18,8 @@
 }
 
 .user-data__title {
+  left: 89px;
+
   @media (min-width: $tablet-width) {
     position: absolute;
     top: 0;
