@@ -4,7 +4,27 @@
 
   fieldset {
     border: none;
-    border-top: 1px solid #e5e5e5;
+    border-top: 1px solid $grey-dark;
+
+    @media (min-width: $tablet-width) {
+      border-top: 1px solid $grey-border;
+
+      &:nth-child(1) {
+        border-top: none;
+        margin: 0;
+        margin-left: 50px;
+      }
+
+      &:nth-child(2) {
+        border-top: none;
+      }
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 34px;
   }
 }
 
@@ -18,19 +38,55 @@
     padding-top: 96px;
     padding-bottom: 25px;
   }
+
+  @media (min-width: $tablet-width) {
+    width: 648px;
+    padding-top: 30px;
+
+    &:nth-of-type(1) {
+      width: 324px;
+      padding: 55px 43px 60px 0;
+    }
+
+    &:nth-of-type(2) {
+      width: 324px;
+      padding: 54px 0 60px 37px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 960px;
+
+    &:nth-of-type(1) {
+      width: 563px;
+      padding: 55px 20px 70px 60px;
+    }
+
+    &:nth-of-type(2) {
+      width: 470px;
+      padding: 54px 0 70px 56px;
+    }
+  }
 }
 
 .form__title {
-  font-style: normal;
-  font-weight: 700;
+  font-weight: $weight-bold;
   font-size: 18px;
   line-height: 144%;
   align-items: center;
   text-align: center;
   text-transform: uppercase;
-  color: #000000;
+  color: $black;
   position: absolute;
   top: 24px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+    line-height: 124%;
+    top: 16px;
+    margin: 0;
+    position: relative;
+  }
 }
 
 .form__inner {
@@ -48,29 +104,28 @@
 
 .form__label {
   margin-left: 16px;
-  font-style: normal;
-  font-weight: 400;
+  font-weight: $weight-normal;
   font-size: 14px;
   line-height: 150%;
   align-items: center;
   text-transform: uppercase;
-  color: #333333;
+  color: $dark;
 }
 
 .form__input {
   width: 280px;
-  background-color: #f2f2f2;
+  background-color: $grey-light;
   height: 58px;
   border: none;
 
   &:hover {
     border: none;
-    background-color: #e5e5e5;
+    background-color: $grey-dark;
   }
 
   &:active {
     background-color: $white;
-    border: 4px solid #e5e5e5;
+    border: 4px solid $grey-dark;
   }
 }
 
@@ -78,17 +133,27 @@
   margin: 0 auto;
   margin-bottom: 30px;
   width: 280px;
+
+  @media (min-width: $tablet-width) {
+    width: 648px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 768px;
+  }
 }
 
 .form__button {
   display: block;
   width: 280px;
   height: 58px;
-  background-color: #81b3d2;
+  background-color: $blue-base;
   border: none;
   color: $white;
-  font-style: normal;
-  font-weight: 700;
+  font-weight: $weight-bold;
   font-size: 21px;
   line-height: 124%;
   align-items: center;
@@ -96,26 +161,38 @@
   text-transform: uppercase;
 
   &:hover {
-    background-color: #669ec0;
+    background-color: $blue-hover;
   }
 
   &:active {
-    background-color: #5496bd;
-    color: rgba(255, 255, 255, 0.3);
+    background-color: $blue-active;
+    color: $white-opacity;
   }
 
   &:disabled {
-    background-color: #e5e5e5;
+    background-color: $grey-dark;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 324px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 384px;
   }
 }
 
 .form__info {
   margin: 0;
-  font-style: normal;
-  font-weight: 400;
+  font-weight: $weight-normal;
   font-size: 12px;
   line-height: 175%;
   text-transform: uppercase;
-  color: rgba(51, 51, 51, 0.6);
+  color: $dark-opacity;
   text-align: end;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 150%;
+  }
 }

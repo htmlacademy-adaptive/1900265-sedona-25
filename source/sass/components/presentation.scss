@@ -1,34 +1,67 @@
 .presentation {
   width: 280px;
   margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 648px;
+    margin-bottom: 37px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 800px;
+    margin-bottom: 80px;
+  }
 }
 
 .presentation__title {
-  font-style: normal;
-  font-weight: 700;
+  font-weight: $weight-bold;
   font-size: 18px;
   line-height: 144%;
   align-items: center;
   text-align: center;
   text-transform: uppercase;
-  color: #000000;
+  color: $black;
   margin-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 87%;
+    margin-top: 56px;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 60px;
+  }
 }
 
 .presentation__subtitle {
   max-width: 250px;
   margin: 0 auto;
   margin-bottom: 40px;
-  font-style: normal;
-  font-weight: 400;
+  font-weight: $weight-normal;
   font-size: 14px;
   line-height: 150%;
   align-items: center;
   text-align: center;
   text-transform: uppercase;
-  color: #333333;
+  color: $dark;
+
+  @media (min-width: $tablet-width) {
+    min-width: 445px;
+    margin-bottom: 90px;
+  }
 }
 
 .presentation__stopcadr {
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 648px;
+    height: 500px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 800px;
+  }
 }
