@@ -1,37 +1,32 @@
 .modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 320px;
+  margin: 0 auto;
   background-color: $white;
   box-shadow: 0 7px 15px $modal-shadow;
   font-family: $base-font;
   text-transform: uppercase;
   text-align: center;
-}
 
-.modal__failure {
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 320px;
-  height: 280px;
-  padding: 29px 47px;
+  &--failure {
+    height: 280px;
+    padding: 29px 47px;
 
-  @media (min-width: $tablet-width) {
-    width: 400px;
-    height: 347px;
+    @media (min-width: $tablet-width) {
+      width: 400px;
+      height: 347px;
+    }
   }
-}
 
-.modal__success {
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 320px;
-  height: 323px;
+  &--success {
+    height: 323px;
 
-  @media (min-width: $tablet-width) {
-    width: 640px;
-    height: 347px;
+    @media (min-width: $tablet-width) {
+      width: 640px;
+      height: 347px;
+    }
   }
 }
 
@@ -89,6 +84,15 @@
   font-size: 21px;
   line-height: 124%;
   text-transform: uppercase;
+
+  &:hover {
+    background-color: $blue-hover;
+  }
+
+  &:active {
+    background-color: $blue-active;
+    color: $white-opacity-03;
+  }
 
   &--failure {
     width: 180px;
