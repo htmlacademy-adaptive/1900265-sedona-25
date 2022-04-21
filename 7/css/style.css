@@ -498,7 +498,7 @@ a {
   .intro__text {
     margin-top: 57px;
     margin-bottom: 0;
-    padding-bottom: 46px;
+    padding-bottom: 25px;
   }
 }
 .intro__text--main::after {
@@ -737,6 +737,7 @@ a {
 }
 @media (min-width: 1280px) {
   .card__box--city {
+    justify-content: space-around;
     padding: 45px 60px;
   }
 }
@@ -914,6 +915,7 @@ a {
 }
 @media (min-width: 1280px) {
   .card__title--main-list {
+    max-width: 315px;
     padding: 3px 83px;
   }
 }
