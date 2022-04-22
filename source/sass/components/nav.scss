@@ -1,24 +1,25 @@
 .nav {
-  width: 320px;
+  min-width: 320px;
   margin: 0 auto;
   display: flex;
   justify-content: flex-end;
   position: relative;
 
   @media (min-width: $tablet-width) {
-    width: 768px;
+    min-width: 768px;
     display: block;
-    background-color: $white;
   }
 
   @media (min-width: $desktop-width) {
-    width: 1200px;
+    min-width: 100%;
+    max-width: 1200px;
   }
 }
 
 .nav__logo {
   position: absolute;
   left: 67px;
+  z-index: 10;
 
   @media (min-width: $tablet-width) {
     left: 290px;
@@ -31,46 +32,152 @@
 }
 
 .nav__toggle {
-  margin: 17px;
-  margin-left: 0 auto;
-  border: none;
+  display: block;
+  padding: 0;
+  width: 24px;
+  height: 24px;
   background-color: transparent;
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  z-index: 20;
+  border: none;
   cursor: pointer;
-
-  &:hover {
-    fill-opacity: 0.6;
-  }
-
-  &:active {
-    fill-opacity: 0.3;
-  }
 
   @media (min-width: $tablet-width) {
     display: none;
   }
 }
 
+.nav--closed .nav__toggle {
+  display: block;
+  padding: 0;
+  width: 23px;
+  height: 22px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 23px;
+    height: 4px;
+    background-color: $blue-base;
+    box-shadow: 0 9px 0 0 $blue-base, 0 18px 0 0 $blue-base;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &:hover::before {
+    background-color: $blue-opacity-06;
+    box-shadow: 0 9px 0 0 $blue-opacity-06, 0 18px 0 0 $blue-opacity-06;
+  }
+
+  &:active::before {
+    background-color: $blue-opacity-03;
+    box-shadow: 0 9px 0 0 $blue-opacity-03, 0 18px 0 0 $blue-opacity-03;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .nav--closed .nav__item {
+    display: none;
+  }
+
+  .nav--opened {
+    position: absolute;
+    z-index: 200;
+    min-height: 223px;
+  }
+
+  .nav--nojs .nav__toggle {
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  .nav--nojs .nav {
+    position: static;
+    min-height: 0;
+  }
+
+  .nav--nojs .nav__item {
+    display: block;
+  }
+}
+
+.nav--opened .nav__toggle {
+  display: block;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: -2px;
+    width: 30px;
+    height: 4px;
+    background-color: $white;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover::before,
+  &:hover::after {
+    background-color: $white-opacity-06;
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: $white-opacity-03;
+  }
+
+  @media (min-width: $tablet-width) {
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+}
+
 .nav__list {
-  display: none;
-  // display: flex;
+  display: flex;
   flex-direction: column;
   list-style: none;
   margin: 0;
   padding: 0;
   position: absolute;
+  top: 0;
+  right: 0;
   z-index: 10;
 
   @media (min-width: $tablet-width) {
     position: relative;
     margin: 0 auto;
     z-index: 0;
-    min-width: 768px;
+    // min-width: 768px;
+    width: 100%;
+    max-width: 768px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
 
   @media (min-width: $desktop-width) {
-    min-width: 1200px;
+    width: auto;
+    max-width: 1200px;
   }
 }
 
@@ -82,6 +189,37 @@
   box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
   text-align: center;
   padding-top: 16px;
+  position: relative;
+
+  &:last-of-type::after {
+    content: "";
+    width: 320px;
+    height: 7px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &:hover {
+    background-color: $blue-hover;
+
+    @media (min-width: $tablet-width) {
+      background-color: $white;
+    }
+  }
+
+  &:active {
+    background-color: $blue-active;
+
+    @media (min-width: $tablet-width) {
+      background-color: $white;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     width: auto;
@@ -136,6 +274,20 @@
   text-transform: uppercase;
   color: $white;
   margin: 0;
+
+  &:hover {
+    @media (min-width: $tablet-width) {
+      color: $blue-base;
+    }
+  }
+
+  &:active {
+    color: $white-opacity-03;
+
+    @media (min-width: $tablet-width) {
+      color: $black-opacity;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 14px;
