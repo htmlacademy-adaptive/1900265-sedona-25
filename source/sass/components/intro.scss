@@ -2,6 +2,25 @@
   width: 320px;
   margin: 0 auto;
 
+  &--main {
+    position: relative;
+
+    &::after {
+      content: "";
+      background-color: $white;
+      width: 100%;
+      height: 37px;
+      position: absolute;
+      bottom: -53px;
+      left: 0;
+      clip-path: polygon(0 0, 0 22px, 160px 37px, 320px 22px, 320px 0);
+
+      @media (min-width: $tablet-width) {
+        display: none;
+      }
+    }
+  }
+
   @media (min-width: $tablet-width) {
     width: 768px;
   }
@@ -24,73 +43,51 @@
 }
 
 .intro__logo {
-  background-color: #0f0044;
-  color: #000000;
-  margin: 0;
+  display: block;
+  background-color: $dark;
+  background-repeat: no-repeat;
+  background-size: cover;
 
-  &--mobile {
+  &--main {
     display: block;
+    width: 320px;
+    height: 389px;
+    background-image: url("../img/bg-intro/main-mob.jpg");
+    padding: 90px 19px 85px;
 
     @media (min-width: $tablet-width) {
-      display: none;
-    }
-  }
-
-  &--tablet {
-    display: none;
-
-    @media (min-width: $tablet-width) {
-      display: block;
+      width: 768px;
+      height: 518px;
+      background-image: url("../img/bg-intro/main-tabl.jpg");
+      padding: 77px 19px 90px;
     }
 
     @media (min-width: $desktop-width) {
-      display: none;
+      width: 1200px;
+      background-image: url("../img/bg-intro/main-desk.jpg");
+      padding: 77px 19px 90px;
     }
   }
 
-  &--desktop {
-    display: none;
+  &--inner {
+    width: 320px;
+    height: 158px;
+    background-image: url("../img/bg-intro/inner-mob.jpg");
+    background-position: 0 -55px;
+    padding: 52px 19px 67px;
 
     @media (min-width: $tablet-width) {
-      display: none;
+      width: 768px;
+      height: 290px;
+      background-image: url("../img/bg-intro/inner-tabl.jpg");
+      padding: 95px 19px 117px;
     }
 
     @media (min-width: $desktop-width) {
-      display: block;
-      margin: 0 auto;
-    }
-  }
-
-  &--mobile-inner {
-    display: block;
-
-    @media (min-width: $tablet-width) {
-      display: none;
-    }
-  }
-
-  &--tablet-inner {
-    display: none;
-
-    @media (min-width: $tablet-width) {
-      display: block;
-    }
-
-    @media (min-width: $desktop-width) {
-      display: none;
-    }
-  }
-
-  &--desktop-inner {
-    display: none;
-
-    @media (min-width: $tablet-width) {
-      display: none;
-    }
-
-    @media (min-width: $desktop-width) {
-      display: block;
-      margin: 0 auto;
+      width: 1200px;
+      height: 301px;
+      background-image: url("../img/bg-intro/inner-desk.jpg");
+      padding: 101px 371px 120px 368px;
     }
   }
 }
@@ -108,6 +105,26 @@
   align-items: center;
   position: relative;
 
+  &::before {
+    content: "";
+    width: 320px;
+    height: 57px;
+    background-image: url("../img/bg-intro/triangle-mob.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+
+    @media (min-width: $tablet-width) {
+      width: 768px;
+      background-image: url("../img/bg-intro/triangle-tabl.svg");
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 1200px;
+      background-image: url("../img/bg-intro/triangle-desk.svg");
+    }
+  }
+
   @media (min-width: $tablet-width) {
     width: 520px;
     margin-top: 46px;
@@ -121,19 +138,30 @@
   }
 
   &--main {
-    &::after {
-      position: absolute;
-      width: 100%;
-      height: 37px;
-      bottom: -53px;
-      background-image: url("../img/wh-intro-mob-bot.png");
-      background-repeat: no-repeat;
+    position: relative;
+
+    &::before {
       content: "";
-      z-index: 10;
+      top: -89px;
+      left: 0;
 
       @media (min-width: $tablet-width) {
-        display: none;
+        top: -103px;
+        left: -124px;
       }
+
+      @media (min-width: $desktop-width) {
+        top: -114px;
+        left: -340px;
+      }
+    }
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 34px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 0;
     }
   }
 
@@ -142,8 +170,23 @@
     padding-left: 16px;
     margin-bottom: 40px;
 
+    &::before {
+      content: "";
+      top: -91px;
+      left: 0;
+
+      @media (min-width: $tablet-width) {
+        top: -117px;
+        left: -147px;
+      }
+
+      @media (min-width: $desktop-width) {
+        top: -154px;
+        left: -363px;
+      }
+    }
+
     @media (min-width: $tablet-width) {
-      // min-width: 474px;
       width: 474px;
       margin-top: 60px;
       margin-bottom: 90px;
@@ -151,7 +194,7 @@
 
     @media (min-width: $desktop-width) {
       margin-top: 98px;
-      margin-bottom: 42px;
+      margin-bottom: 63px;
     }
   }
 
@@ -159,6 +202,22 @@
     margin-top: 36px;
     margin-bottom: 29px;
     padding-left: 10px;
+
+    &::before {
+      content: "";
+      top: -93px;
+      left: 0;
+
+      @media (min-width: $tablet-width) {
+        top: -120px;
+        left: -124px;
+      }
+
+      @media (min-width: $desktop-width) {
+        top: -169px;
+        left: -340px;
+      }
+    }
 
     @media (min-width: $tablet-width) {
       margin-top: 64px;
@@ -168,7 +227,7 @@
 
     @media (min-width: $desktop-width) {
       margin-top: 113px;
-      margin-bottom: 20px;
+      margin-bottom: 40px;
       padding-left: 17px;
     }
   }

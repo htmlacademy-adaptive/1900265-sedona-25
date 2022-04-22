@@ -19,6 +19,7 @@
 .nav__logo {
   position: absolute;
   left: 67px;
+  z-index: 10;
 
   @media (min-width: $tablet-width) {
     left: 290px;
