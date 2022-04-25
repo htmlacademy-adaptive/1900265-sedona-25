@@ -1,27 +1,25 @@
 .emotions {
-  margin-bottom: 16px;
-  padding-left: 20px;
+  width: 280px;
+  margin-bottom: 40px;
+  padding-top: 20px;
+  padding-left: 13px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 10px;
+    width: 648px;
+    padding: 0;
+    padding-top: 30px;
+    margin-bottom: 42px;
   }
 
   @media (min-width: $desktop-width) {
+    width: 960px;
     padding-left: 94px;
   }
 }
 
 .emotions__title {
-  left: 53px;
-
-  @media (min-width: $tablet-width) {
-    top: 4px;
-    left: -4px;
-    padding: 0 30px;
-  }
-
   @media (min-width: $desktop-width) {
-    left: -42px;
+    padding-right: 98px;
   }
 }
 
