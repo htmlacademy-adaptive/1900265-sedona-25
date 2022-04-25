@@ -1793,7 +1793,7 @@ fieldset {
     display: none;
   }
   .form__group--showplaces::after, .form__group--showplaces::before {
-    top: 26px;
+    top: -56px;
   }
 }
 
@@ -2183,7 +2183,7 @@ fieldset {
 }
 @media (min-width: 1280px) {
   .showplaces__title {
-    padding-right: 16px;
+    padding-right: 6px;
     padding-bottom: 28px;
   }
 }
@@ -2205,8 +2205,8 @@ fieldset {
 }
 @media (min-width: 1280px) {
   .showplaces__list {
-    width: 960px;
-    padding-left: 10px;
+    width: 948px;
+    padding-left: 15px;
     padding-right: 10px;
     justify-content: space-evenly;
   }
@@ -2234,11 +2234,11 @@ fieldset {
     padding-left: 20px;
   }
   .showplaces__item:nth-child(3) {
-    padding-left: 25px;
+    padding-left: 30px;
   }
   .showplaces__item:last-child {
     width: 204px;
-    padding-left: 15px;
+    padding-left: 20px;
   }
 }
 
