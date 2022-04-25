@@ -24,7 +24,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-right: 16px;
+    padding-right: 6px;
     padding-bottom: 28px;
   }
 }
@@ -44,8 +44,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 960px;
-    padding-left: 10px;
+    width: 948px;
+    padding-left: 15px;
     padding-right: 10px;
     justify-content: space-evenly;
   }
@@ -73,12 +73,12 @@
     }
 
     &:nth-child(3) {
-      padding-left: 25px;
+      padding-left: 30px;
     }
 
     &:last-child {
       width: 204px;
-      padding-left: 15px;
+      padding-left: 20px;
     }
   }
 }
