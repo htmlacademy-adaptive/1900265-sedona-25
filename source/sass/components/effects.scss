@@ -5,14 +5,13 @@
   padding-left: 0;
 
   @media (min-width: $tablet-width) {
-    width: 648px;
+    width: 100%;
     padding-top: 27px;
     padding-left: 10px;
     margin-bottom: 18px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 960px;
     padding-left: 0;
     padding-top: 43px;
     margin-bottom: 50px;
@@ -53,6 +52,7 @@
 .effects__item {
   height: 46px;
   margin-bottom: 16px;
+  position: relative;
 
   &:last-child {
     margin-bottom: 0;
@@ -68,5 +68,54 @@
     &:last-child {
       width: 280px;
     }
+  }
+}
+
+.effects__text {
+  font-family: $base-font;
+  font-weight: $weight-bold;
+  font-size: 18px;
+  line-height: 144%;
+  color: $black;
+  position: relative;
+  padding-top: 12px;
+  padding-left: 60px;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: $grey-light;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &::after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: $dark;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    opacity: 0;
+  }
+}
+
+.effects__label input {
+  &:checked + .effects__text::after {
+    opacity: 1;
+  }
+
+  &:hover + .effects__text::before {
+    background-color: $grey-dark;
+  }
+
+  &:active + .effects__text::before {
+    background-color: $grey-active;
   }
 }
