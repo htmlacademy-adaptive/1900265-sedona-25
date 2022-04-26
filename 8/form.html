@@ -83,15 +83,13 @@
 
         <fieldset class="form__group form__group--user-contacts user-contacts">
           <legend class="form__title user-contacts__title">Контактная информация:</legend>
-          <div class="form__inner user-contacts__phone">
+          <div class="form__inner user-contacts__inner user-contacts__phone">
             <label class="form__label user-contacts__label" for="phone">Контактный телефон*:</label>
             <input class="form__input user-contacts__input user-contacts__input--phone" type="text" id="phone" placeholder="Введите телефон">
-            <span class="user-contacts__icon user-contacts__icon--phone"></span>
           </div>
-          <div class="form__inner user-contacts__email">
+          <div class="form__inner user-contacts__inner user-contacts__email">
             <label class="form__label user-contacts__label" for="email">Электронная почта*:</label>
             <input class="form__input user-contacts__input user-contacts__input--email" type="email" id="email" placeholder="Введите e-mail" required>
-            <span class="user-contacts__icon user-contacts__icon--email"></span>
           </div>
         </fieldset>
 
@@ -99,24 +97,21 @@
           <legend class="form__title effects__title">Ваше общее впечатление:</legend>
           <ul class="effects__list">
             <li class="effects__item">
-              <label class="control">
-                <input class="visually-hidden control__input" type="radio" name="effects" value="positive" id="positive" checked>
-                <span class="control__mark control__mark--effects"></span>
-                <span class="control__label">Скорее положительное</span>
+              <label class="effects__label" for="positive">
+                <input class="form__mark effects__input" type="radio" name="effects" value="positive" id="positive" checked>
+                <span class="effects__text">Скорее положительное</span>
               </label>
             </li>
             <li class="effects__item">
-              <label class="control">
-                <input class="visually-hidden control__input" type="radio" name="effects" value="negative" id="negative">
-                <span class="control__mark control__mark--effects"></span>
-                <span class="control__label">Скорее отрицательное</span>
+              <label class="effects__label" for="negative">
+                <input class="form__mark effects__input" type="radio" name="effects" value="negative" id="negative">
+                <span class="effects__text">Скорее отрицательное</span>
               </label>
             </li>
             <li class="effects__item">
-              <label class="control">
-                <input class="visually-hidden control__input" type="radio" name="effects" value="no-answer" id="no-answer">
-                <span class="control__mark control__mark--effects"></span>
-                <span class="control__label">Затрудняюсь ответить</span>
+              <label class="effects__label" for="no-answer">
+                <input class="form__mark effects__input" type="radio" name="effects" value="no-answer" id="no-answer">
+                <span class="effects__text">Затрудняюсь ответить</span>
               </label>
             </li>
           </ul>
@@ -126,31 +121,27 @@
           <legend class="form__title showplaces__title">Посещенные достопримечательности:</legend>
           <ul class="showplaces__list">
             <li class="showplaces__item">
-              <label class="control">
-                <input class="visually-hidden control__input" type="checkbox" name="bridge" id="bridge" checked>
-                <span class="control__mark"></span>
-                <span class="control__label">Мост Дьявола</span>
+              <label class="showplaces__label" for="bridge">
+                <input class="form__mark showplaces__input" type="checkbox" name="bridge" id="bridge" checked>
+                <span class="showplaces__text">Мост Дьявола</span>
               </label>
             </li>
             <li class="showplaces__item">
-              <label class="control">
-                <input class="visually-hidden control__input" type="checkbox" name="bell" id="bell" checked>
-                <span class="control__mark"></span>
-                <span class="control__label">Гора-Колокол</span>
+              <label class="showplaces__label" for="bell">
+                <input class="form__mark showplaces__input" type="checkbox" name="bell" id="bell" checked>
+                <span class="showplaces__text">Гора-Колокол</span>
               </label>
             </li>
             <li class="showplaces__item">
-              <label class="control">
-                <input class="visually-hidden control__input" type="checkbox" name="slide" id="slide" checked>
-                <span class="control__mark"></span>
-                <span class="control__label">Слайд-парк</span>
+              <label class="showplaces__label" for="slide">
+                <input class="form__mark showplaces__input" type="checkbox" name="slide" id="slide" checked>
+                <span class="showplaces__text">Слайд-парк</span>
               </label>
             </li>
             <li class="showplaces__item">
-              <label class="control">
-                <input class="visually-hidden control__input" type="checkbox" name="rocks" id="rocks">
-                <span class="control__mark"></span>
-                <span class="control__label">Красные скалы</span>
+              <label class="showplaces__label" for="rocks">
+                <input class="form__mark showplaces__input" type="checkbox" name="rocks" id="rocks">
+                <span class="showplaces__text">Красные скалы</span>
               </label>
             </li>
           </ul>
