@@ -1,17 +1,17 @@
 .showplaces {
   width: 280px;
-  margin-bottom: 39px;
-  padding-top: 21px;
+  margin-bottom: 29px;
+  padding-top: 29px;
   padding-left: 0;
 
   @media (min-width: $tablet-width) {
     width: 100%;
-    padding-top: 29px;
-    margin-bottom: 16px;
+    padding-top: 39px;
+    margin-bottom: 6px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 62px;
+    margin-bottom: 52px;
   }
 }
 
