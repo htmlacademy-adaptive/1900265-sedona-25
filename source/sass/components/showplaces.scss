@@ -1,27 +1,30 @@
 .showplaces {
-  margin-bottom: 0;
-  padding-top: 96px;
+  width: 280px;
+  margin-bottom: 29px;
+  padding-top: 29px;
+  padding-left: 0;
 
   @media (min-width: $tablet-width) {
-    padding-top: 31px;
+    width: 100%;
+    padding-top: 39px;
+    margin-bottom: 6px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-bottom: 68px;
+    margin-bottom: 52px;
   }
 }
 
 .showplaces__title {
-  left: 0;
+  padding-left: 13px;
 
   @media (min-width: $tablet-width) {
-    top: 4px;
-    width: 308px;
+    max-width: 308px;
   }
 
   @media (min-width: $desktop-width) {
-    top: 7px;
-    padding-bottom: 35px;
+    padding-right: 6px;
+    padding-bottom: 28px;
   }
 }
 
@@ -35,22 +38,21 @@
     flex-wrap: wrap;
     margin: 0 auto;
     justify-content: space-around;
-    padding-left: 48px;
-    padding-right: 67px;
+    padding-left: 70px;
+    padding-right: 57px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 960px;
-    padding-left: 34px;
-    padding-right: 34px;
-    justify-content: space-between;
+    width: 948px;
+    padding-left: 15px;
+    padding-right: 10px;
+    justify-content: space-evenly;
   }
 }
 
 .showplaces__item {
   height: 46px;
   margin-bottom: 16px;
-  padding-left: 10px;
 
   &:last-child {
     margin-bottom: 0;
@@ -70,12 +72,59 @@
     }
 
     &:nth-child(3) {
-      padding-left: 25px;
+      padding-left: 30px;
     }
 
     &:last-child {
       width: 204px;
-      padding-left: 15px;
+      padding-left: 20px;
     }
+  }
+}
+
+.showplaces__text {
+  font-family: $base-font;
+  font-weight: $weight-bold;
+  font-size: 18px;
+  line-height: 144%;
+  color: $black;
+  position: relative;
+  padding-top: 12px;
+  padding-left: 60px;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    width: 46px;
+    height: 46px;
+    background-color: $grey-light;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &::after {
+    content: "";
+    width: 22px;
+    height: 16px;
+    background-image: url("../img/tick.svg");
+    position: absolute;
+    top: 15px;
+    left: 12px;
+    opacity: 0;
+  }
+}
+
+.showplaces__label input {
+  &:checked + .showplaces__text::after {
+    opacity: 1;
+  }
+
+  &:hover + .showplaces__text::before {
+    background-color: $grey-dark;
+  }
+
+  &:active + .showplaces__text::before {
+    background-color: $grey-active;
   }
 }

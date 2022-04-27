@@ -1,33 +1,32 @@
 .effects {
-  padding-left: 20px;
-  padding-bottom: 25px;
+  width: 280px;
+  margin-bottom: 30px;
+  padding-top: 32px;
+  padding-left: 0;
 
   @media (min-width: $tablet-width) {
-    padding-left: 36px;
+    width: 100%;
+    padding-top: 37px;
+    padding-left: 10px;
+    margin-bottom: 8px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 960px;
-    padding-left: 77px;
-    padding-top: 48px;
-    padding-bottom: 50px;
+    padding-left: 0;
+    padding-top: 53px;
+    margin-bottom: 40px;
   }
 }
 
 .effects__title {
-  left: 43px;
+  padding-left: 13px;
 
   @media (min-width: $tablet-width) {
-    top: 2px;
-    left: -12px;
-    padding: 0 55px;
+    padding: 0;
   }
 
   @media (min-width: $desktop-width) {
-    left: -47px;
-    padding-left: 100px;
-    padding-right: 70px;
-    min-width: 400px;
+    padding-left: 10px;
   }
 }
 
@@ -39,11 +38,13 @@
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
+    margin-left: 26px;
     margin-bottom: 20px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 924px;
+    width: 896px;
+    margin-left: 54px;
     margin-bottom: 0;
   }
 }
@@ -51,6 +52,7 @@
 .effects__item {
   height: 46px;
   margin-bottom: 16px;
+  position: relative;
 
   &:last-child {
     margin-bottom: 0;
@@ -64,7 +66,56 @@
     width: 308px;
 
     &:last-child {
-      width: 300px;
+      width: 280px;
     }
+  }
+}
+
+.effects__text {
+  font-family: $base-font;
+  font-weight: $weight-bold;
+  font-size: 18px;
+  line-height: 144%;
+  color: $black;
+  position: relative;
+  padding-top: 12px;
+  padding-left: 60px;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: $grey-light;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &::after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: $dark;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    opacity: 0;
+  }
+}
+
+.effects__label input {
+  &:checked + .effects__text::after {
+    opacity: 1;
+  }
+
+  &:hover + .effects__text::before {
+    background-color: $grey-dark;
+  }
+
+  &:active + .effects__text::before {
+    background-color: $grey-active;
   }
 }

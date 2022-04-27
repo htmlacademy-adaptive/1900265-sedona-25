@@ -1,34 +1,34 @@
 .user-data {
-  margin-bottom: 5px;
+  width: 280px;
+  margin-bottom: 54px;
+  padding-top: 20px;
 
   @media (min-width: $tablet-width) {
-    margin-left: 60px;
-    position: relative;
+    width: 324px;
+    padding: 0;
+    padding-top: 30px;
+    margin-bottom: 62px;
+  }
 
-    &::after {
-      content: "";
-      width: 1px;
-      height: 338px;
-      background-color: $grey-border;
-      position: absolute;
-      top: 0;
-      right: 0;
-    }
+  @media (min-width: $desktop-width) {
+    width: 480px;
+    height: 338px;
+    margin: 0;
+    margin-bottom: 87px;
   }
 }
 
 .user-data__title {
-  left: 89px;
+  margin: 0;
 
   @media (min-width: $tablet-width) {
-    position: absolute;
-    top: 0;
-    left: 90px;
+    padding-top: 15px;
   }
 
   @media (min-width: $desktop-width) {
-    top: 3px;
-    left: 235px;
+    padding: 0;
+    padding-top: 28px;
+    padding-left: 15px;
   }
 }
 
