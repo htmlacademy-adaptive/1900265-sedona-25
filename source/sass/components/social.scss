@@ -18,6 +18,14 @@
   margin: 0 auto;
   margin-bottom: 32px;
 
+  &:hover {
+    color: $blue-hover;
+  }
+
+  &:active {
+    color: $blue-active;
+  }
+
   &--main-page {
     margin-top: 38px;
 
@@ -78,10 +86,11 @@
 }
 
 .social__item {
+  display: block;
   margin-right: 6px;
-  position: relative;
   width: 48px;
   height: 48px;
+  background-color: $blue-base;
 
   &:last-child {
     margin-right: 0;
@@ -92,16 +101,10 @@
   display: block;
   width: 48px;
   height: 48px;
-  background-color: $blue-base;
+  text-align: center;
+  padding-top: 14px;
 
   svg {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-
     &:active {
       fill-opacity: 0.3;
     }

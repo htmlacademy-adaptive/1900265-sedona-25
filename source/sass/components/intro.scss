@@ -104,11 +104,19 @@
     background-image: url("../img/bg-intro/main-mob.jpg");
     padding: 90px 19px 85px;
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg-intro/main-mob@2x.jpg");
+    }
+
     @media (min-width: $tablet-width) {
       width: 768px;
       height: 518px;
       background-image: url("../img/bg-intro/main-tabl.jpg");
       padding: 77px 19px 90px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/bg-intro/main-tabl@2x.jpg");
+      }
     }
 
     @media (min-width: $desktop-width) {
@@ -116,6 +124,10 @@
       background-image: url("../img/bg-intro/main-desk.jpg");
       background-position-y: 30%;
       padding: 77px 19px 90px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/bg-intro/main-desk@2x.jpg");
+      }
     }
   }
 
@@ -126,11 +138,19 @@
     background-position: 0 -55px;
     padding: 52px 19px 67px;
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg-intro/inner-mob@2x.jpg");
+    }
+
     @media (min-width: $tablet-width) {
       width: 768px;
       height: 290px;
       background-image: url("../img/bg-intro/inner-tabl.jpg");
       padding: 95px 19px 117px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/bg-intro/inner-tabl@2x.jpg");
+      }
     }
 
     @media (min-width: $desktop-width) {
@@ -138,6 +158,10 @@
       height: 301px;
       background-image: url("../img/bg-intro/inner-desk.jpg");
       padding: 101px 371px 120px 368px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/bg-intro/inner-desk@2x.jpg");
+      }
     }
   }
 }
