@@ -5,10 +5,13 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>HTML Academy: Седона</title>
       <link rel="stylesheet" href="css/style.css">
+      <link rel="icon" href="favicon.ico">
+      <link rel="icon" href="img/favicons/favicon-sedona.svg" type="image/svg+xml">
+      <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png">
+      <link rel="manifest" href="manifest.webmanifest">
     </head>
     <body class="body">
       <header class="header">
-        <h1 class="visually-hidden">Добро пожаловать в Седону.</h1>
         <nav class="nav nav--closed nav--nojs"> <!--opened closed -->
           <a class="nav__logo" href="index.html">
             <img src="img/header-logo-sedona.svg" width="185" height="96" alt="Логотип города Седона">
@@ -57,9 +60,9 @@
 
         <section class="advantages">
           <div class="header-page header-page--main">
-            <h2 class="header-page__title header-page__title--main">
+            <h1 class="header-page__title header-page__title--main">
               Седона — небольшой городок в Аризоне, заслуживающий большего!
-            </h2>
+            </h1>
             <p class="header-page__subtitle header-page__subtitle--main">
               Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!
             </p>
@@ -71,7 +74,11 @@
                 <div class="advantages__main-item advantages__main-item--box"><span class="visually-hidden">№1</span></div>
                 <p class="card__text card__text--box">Седона не аттракцион для туристов, там течёт своя жизнь</p>
               </div>
-              <img class="card__photo card__photo--city" src="img/photo-city@1x-mob.jpg" width="320" height="260" alt="Вид на город Седона.">
+              <picture>
+                <source media="(min-width: 1280px)" srcset="img/advantages-img/city-desk.jpg 1x, img/advantages-img/city-desk@2x.jpg 2x">
+                <source media="(min-width: 848px)" srcset="img/advantages-img/city-tabl.jpg 1x, img/advantages-img/city-tabl@2x.jpg 2x">
+                <img class="card__photo card__photo--city" src="img/advantages-img/city-mob.jpg" srcset="img/advantages-img/city-mob@2x.jpg 2x" width="320" height="260" alt="Вид на город Седона.">
+              </picture>
               <ul class="advantages__other-list">
                 <li class="advantages__item">
                   <div class="card__other card__other--house">
@@ -99,8 +106,12 @@
                 <div class="advantages__main-item advantages__main-item--box"><span class="visually-hidden">№2</span></div>
                 <p class="card__text card__text--box">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
               </div>
-              <img class="card__photo card__photo--bridge" src="img/photo-bridge@1x-mob.jpg" width="320" height="260" alt="Вид на каньон.">
-              </li>
+              <picture>
+                <source media="(min-width: 1280px)" srcset="img/advantages-img/bridge-desk.jpg 1x, img/advantages-img/bridge-desk@2x.jpg 2x">
+                <source media="(min-width: 848px)" srcset="img/advantages-img/bridge-tabl.jpg 1x, img/advantages-img/bridge-tabl@2x.jpg 2x">
+                <img class="card__photo card__photo--bridge" src="img/advantages-img/bridge-mob.jpg"  srcset="img/advantages-img/bridge-mob@2x.jpg 2x" width="320" height="260" alt="Вид на каньон.">
+              </picture>
+            </li>
             <li class="advantages__item card">
               <div class="card__main-list">
                 <h3 class="card__title card__title--main-list">Небольшая площадь</h3>

@@ -105,7 +105,8 @@ fieldset {
     &--user-data {
       &::after {
         width: 1px;
-        height: 338px;
+        height: 100%;
+        min-height: 338px;
         top: -25px;
         left: 493px;
       }
