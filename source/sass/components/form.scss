@@ -57,7 +57,7 @@ fieldset {
     &--user-data {
       &::after {
         width: 1px;
-        height: 100%;
+        min-height: 338px;
         top: -25px;
         left: 324px;
       }
@@ -217,7 +217,7 @@ fieldset {
 .form__button {
   display: block;
   width: 280px;
-  height: 58px;
+  min-height: 58px;
   padding: 0;
   padding-top: 8px;
   padding-right: 13px;

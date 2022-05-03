@@ -2,17 +2,17 @@
   list-style: none;
   margin: 0 auto;
   padding: 0;
-  width: 320px;
+  min-width: 320px;
   counter-reset: main-list;
 
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
-    width: 768px;
+    min-width: 768px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 1200px;
+    min-width: 1200px;
   }
 }
 
@@ -24,6 +24,7 @@
 
 .advantages__main-item {
   margin: 0 auto;
+  margin-bottom: 17px;
 
   &::before {
     counter-increment: main-list;
@@ -37,24 +38,28 @@
   &--box::before {
     color: $white;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
 }
 
 .advantages__other-list {
   list-style: none;
   margin: 0 auto;
-  margin-bottom: 54px;
+  margin-bottom: 48px;
   padding: 0;
   padding-top: 22px;
-  width: 280px;
+  max-width: 280px;
 
   @media (min-width: $tablet-width) {
     display: flex;
-    width: 768px;
+    max-width: 768px;
     padding-top: 0;
     margin-bottom: 0;
   }
 
   @media (min-width: $desktop-width) {
-    width: 1200px;
+    max-width: 1200px;
   }
 }

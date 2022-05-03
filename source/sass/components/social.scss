@@ -79,6 +79,7 @@
   margin: 0 auto;
   margin-bottom: 42px;
   display: flex;
+  max-height: 48px;
 
   @media (min-width: $tablet-width) {
     margin: 0 auto;
