@@ -2,26 +2,26 @@
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
-    width: 256px;
+    max-width: 256px;
 
     &:first-child,
     &:nth-child(2) {
-      width: 768px;
+      max-width: 768px;
     }
   }
 
   @media (min-width: $desktop-width) {
-    width: 400px;
+    max-width: 400px;
 
     &:first-child,
     &:nth-child(2) {
-      width: 1200px;
+      max-width: 1200px;
     }
   }
 }
 
 .card__box {
-  height: 191px;
+  min-height: 191px;
   padding: 35px 15px 39px;
   background-color: #81b3d2;
   display: flex;
@@ -29,33 +29,37 @@
   justify-content: space-between;
 
   &--city {
-    height: 209px;
-    padding-top: 55px;
+    min-height: 209px;
+    padding-top: 53px;
 
     @media (min-width: $tablet-width) {
+      max-height: 256px;
       padding: 40px 20px 45px;
     }
 
     @media (min-width: $desktop-width) {
       justify-content: space-around;
-      padding: 45px 60px;
+      padding: 40px 60px;
     }
   }
 
   &--bridge {
+    padding-top: 40px;
+    padding-bottom: 34px;
+
     @media (min-width: $tablet-width) {
       order: 2;
-      padding: 40px 30px;
+      padding: 41px 30px;
     }
 
     @media (min-width: $desktop-width) {
-      padding: 50px 85px;
+      padding: 50px 75px;
     }
   }
 
   @media (min-width: $tablet-width) {
     width: 256px;
-    height: 256px;
+    max-height: 256px;
   }
 
   @media (min-width: $desktop-width) {
@@ -69,15 +73,15 @@
   padding: 0;
   display: grid;
   background-color: $white;
-  grid-template-columns: 40px 235px;
-  column-gap: 6px;
-  row-gap: 10px;
+  grid-template-columns: 40px 240px;
+  column-gap: 3px;
+  row-gap: 13px;
 
   @media (min-width: $tablet-width) {
     display: flex;
     flex-direction: column;
-    width: 256px;
-    height: 330px;
+    min-width: 256px;
+    min-height: 330px;
     align-items: center;
     margin-bottom: 0;
     padding-top: 60px;
@@ -108,6 +112,7 @@
       background-image: url("../img/icon-burger.svg");
       background-repeat: no-repeat;
       background-size: 40px 35px;
+      padding-left: 0;
 
       @media (min-width: $tablet-width) {
         width: 76px;
@@ -135,7 +140,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 400px;
+    min-width: 400px;
   }
 }
 
@@ -143,18 +148,30 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 166px;
-  padding: 22px 35px 27px;
+  min-height: 166px;
+  padding: 24px 35px 27px;
   background-color: $grey;
-  border-bottom: 1px solid #d6d6d6;
+  position: relative;
 
-  @media (min-width: $tablet-width) {
-    height: 256px;
-    padding: 41px 51px;
+  &::after {
+    content: "";
+    width: 280px;
+    height: 1px;
+    background-color: $grey-card-border;
+    position: absolute;
+    bottom: 0;
+    left: 18px;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
   }
 
-  @media (min-width: $desktop-width) {
-    padding-bottom: 60px;
+  @media (min-width: $tablet-width) {
+    min-height: 256px;
+    padding: 42px 38px;
+    align-items: center;
+    justify-content: flex-start;
   }
 }
 
@@ -175,9 +192,11 @@
 
   &--box {
     color: $white;
+    margin-bottom: 8px;
 
     @media (min-width: $desktop-width) {
       padding: 0 36px;
+      margin-bottom: 0;
     }
   }
 
@@ -186,7 +205,7 @@
     padding-top: 8px;
 
     @media (min-width: $tablet-width) {
-      padding-top: 18px;
+      padding-top: 15px;
     }
   }
 
@@ -196,6 +215,7 @@
 
     @media (min-width: $tablet-width) {
       padding-top: 18px;
+      padding-left: 0;
     }
   }
 
@@ -204,11 +224,13 @@
     padding-top: 8px;
 
     @media (min-width: $tablet-width) {
-      padding-top: 13px;
+      padding-top: 10px;
     }
   }
 
   &--main-list {
+    margin-bottom: 10px;
+
     @media (min-width: $tablet-width) {
       max-width: 157px;
     }
@@ -254,11 +276,12 @@
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     text-align: start;
+    padding-left: 5px;
 
     @media (min-width: $tablet-width) {
       text-align: center;
-      padding-top: 14px;
-      max-width: 152px;
+      padding-top: 10px;
+      max-width: 161px;
     }
 
     @media (min-width: $desktop-width) {
@@ -297,8 +320,7 @@
   img {
     display: block;
     margin: 0;
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
   }
 
   @media (min-width: $tablet-width) {
@@ -307,6 +329,8 @@
   }
 
   &--bridge {
+    background-color: $grey-holder;
+
     @media (min-width: $tablet-width) {
       order: 1;
     }

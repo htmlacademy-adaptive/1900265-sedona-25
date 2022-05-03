@@ -4,12 +4,12 @@
   width: 280px;
   margin: 0 auto;
   margin-bottom: 49px;
-  padding-top: 23px;
+  padding-top: 22px;
   background-color: $white;
 
   @media (min-width: $tablet-width) {
     width: 461px;
-    padding-top: 34px;
+    padding-top: 32px;
     margin-bottom: 59px;
   }
 
@@ -56,7 +56,7 @@
 
 .search__button {
   display: block;
-  width: 284px;
+  width: 282px;
   margin: 0 auto;
   padding: 16px;
   background-color: $blue-base;
