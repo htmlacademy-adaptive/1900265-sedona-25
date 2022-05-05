@@ -155,7 +155,7 @@
 
   &::after {
     content: "";
-    width: 280px;
+    min-width: 280px;
     height: 1px;
     background-color: $grey-card-border;
     position: absolute;
@@ -317,20 +317,12 @@
 }
 
 .card__photo {
-  img {
-    display: block;
-    margin: 0;
-    max-width: 100%;
-  }
-
   @media (min-width: $tablet-width) {
     width: 512px;
     height: 256px;
   }
 
   &--bridge {
-    background-color: $grey-holder;
-
     @media (min-width: $tablet-width) {
       order: 1;
     }

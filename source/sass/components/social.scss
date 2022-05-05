@@ -106,6 +106,8 @@
   padding-top: 14px;
 
   svg {
+    fill: $white;
+
     &:active {
       fill-opacity: 0.3;
     }

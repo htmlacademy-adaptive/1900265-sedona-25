@@ -34,4 +34,16 @@
 
 .copyright__icon {
   margin-left: 10px;
+
+  svg {
+    &:hover {
+      fill: $blue-base;
+      color: $blue-base;
+    }
+
+    &:active {
+      fill: $grey-70;
+      color: $grey-70;
+    }
+  }
 }
