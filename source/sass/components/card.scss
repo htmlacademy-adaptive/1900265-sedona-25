@@ -38,8 +38,8 @@
     }
 
     @media (min-width: $desktop-width) {
-      justify-content: space-around;
-      padding: 40px 60px;
+      justify-content: flex-start;
+      padding: 46px 60px;
     }
   }
 
@@ -53,6 +53,7 @@
     }
 
     @media (min-width: $desktop-width) {
+      justify-content: flex-start;
       padding: 50px 75px;
     }
   }
@@ -153,20 +154,6 @@
   background-color: $grey;
   position: relative;
 
-  &::after {
-    content: "";
-    min-width: 280px;
-    height: 1px;
-    background-color: $grey-card-border;
-    position: absolute;
-    bottom: 0;
-    left: 18px;
-
-    @media (min-width: $tablet-width) {
-      display: none;
-    }
-  }
-
   @media (min-width: $tablet-width) {
     min-height: 256px;
     padding: 42px 38px;
@@ -196,13 +183,14 @@
 
     @media (min-width: $desktop-width) {
       padding: 0 36px;
-      margin-bottom: 0;
+      margin-bottom: 13px;
     }
   }
 
   &--house {
     text-align: start;
-    padding-top: 8px;
+    padding-top: 10px;
+    padding-left: 2px;
 
     @media (min-width: $tablet-width) {
       padding-top: 15px;
@@ -211,7 +199,8 @@
 
   &--burger {
     text-align: start;
-    padding-top: 8px;
+    padding-top: 7px;
+    padding-left: 8px;
 
     @media (min-width: $tablet-width) {
       padding-top: 18px;
@@ -221,7 +210,7 @@
 
   &--gift {
     text-align: start;
-    padding-top: 8px;
+    padding-top: 6px;
 
     @media (min-width: $tablet-width) {
       padding-top: 10px;
@@ -237,7 +226,8 @@
 
     @media (min-width: $desktop-width) {
       max-width: 315px;
-      padding: 3px 83px;
+      margin-bottom: 12px;
+      padding: 0 83px;
     }
   }
 }
@@ -302,6 +292,7 @@
 
     @media (min-width: $desktop-width) {
       max-width: 255px;
+      padding-top: 11px;
     }
   }
 
@@ -311,7 +302,7 @@
     }
 
     @media (min-width: $desktop-width) {
-      margin-top: 20px;
+      margin-top: 22px;
     }
   }
 }

@@ -20,6 +20,37 @@
   display: block;
   padding: 0;
   text-transform: uppercase;
+  position: relative;
+
+  &:nth-of-type(4) {
+    &::before {
+      content: "";
+      min-width: 280px;
+      height: 1px;
+      background-color: $grey-card-border;
+      position: absolute;
+      top: -1px;
+      left: 18px;
+
+      @media (min-width: $tablet-width) {
+        display: none;
+      }
+    }
+
+    &::after {
+      content: "";
+      min-width: 280px;
+      height: 1px;
+      background-color: $grey-card-border;
+      position: absolute;
+      bottom: 0;
+      left: 18px;
+
+      @media (min-width: $tablet-width) {
+        display: none;
+      }
+    }
+  }
 }
 
 .advantages__main-item {
@@ -35,12 +66,18 @@
     color: $black;
   }
 
-  &--box::before {
-    color: $white;
-  }
-
   @media (min-width: $desktop-width) {
     margin-bottom: 0;
+  }
+
+  &--box {
+    &::before {
+      color: $white;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 23px;
+    }
   }
 }
 
