@@ -223,6 +223,7 @@ fieldset {
   min-height: 58px;
   padding: 0;
   padding-top: 8px;
+  margin: 0 auto;
   background-color: $blue-base;
   border: none;
   color: $white;
@@ -249,6 +250,7 @@ fieldset {
 
   @media (min-width: $tablet-width) {
     width: 324px;
+    margin: 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -259,6 +261,7 @@ fieldset {
 .form__info {
   margin: 0;
   padding-top: 5px;
+  padding-right: 20px;
   font-weight: $weight-normal;
   font-size: 12px;
   line-height: 175%;
@@ -270,5 +273,6 @@ fieldset {
     font-size: 14px;
     line-height: 150%;
     padding-top: 10px;
+    padding-right: 0;
   }
 }
