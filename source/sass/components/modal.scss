@@ -67,7 +67,7 @@
 
 .modal__close {
   &--success {
-    height: 98px;
+    min-height: 98px;
     background-color: $grey-light;
     padding-top: 20px;
   }
