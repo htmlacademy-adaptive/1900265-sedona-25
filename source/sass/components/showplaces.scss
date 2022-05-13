@@ -123,6 +123,10 @@
     opacity: 1;
   }
 
+  &:focus + .showplaces__text::before {
+    border: outset $black;
+  }
+
   &:hover + .showplaces__text::before {
     background-color: $grey-dark;
   }

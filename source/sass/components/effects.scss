@@ -113,6 +113,10 @@
     opacity: 1;
   }
 
+  &:focus + .effects__text::before {
+    border: outset $black;
+  }
+
   &:hover + .effects__text::before {
     background-color: $grey-dark;
   }
