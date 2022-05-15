@@ -1,26 +1,34 @@
 .effects {
   width: 320px;
   margin: 0;
-  margin-bottom: 41px;
+  margin-bottom: 38px;
   padding: 30px 20px 0 20px;
 
   @media (min-width: $tablet-width) {
     width: 100%;
     padding-top: 37px;
     padding-left: 10px;
-    margin-bottom: 19px;
+    margin-bottom: 69px;
   }
 
   @media (min-width: $desktop-width) {
     padding-left: 0;
-    padding-top: 53px;
-    margin-bottom: 50px;
+    padding-top: 56px;
+    margin-bottom: 130px;
   }
 }
 
 .effects__title {
+  @media (min-width: $tablet-width) {
+    padding-left: 8px;
+    top: -28px;
+    left: 182px;
+  }
+
   @media (min-width: $desktop-width) {
-    padding-left: 10px;
+    padding-left: 0;
+    top: -28px;
+    left: 345px;
   }
 }
 
@@ -44,7 +52,7 @@
 }
 
 .effects__item {
-  height: 46px;
+  min-height: 46px;
   margin-bottom: 16px;
   position: relative;
 
@@ -103,6 +111,10 @@
 .effects__label input {
   &:checked + .effects__text::after {
     opacity: 1;
+  }
+
+  &:focus + .effects__text::before {
+    border: outset $black;
   }
 
   &:hover + .effects__text::before {

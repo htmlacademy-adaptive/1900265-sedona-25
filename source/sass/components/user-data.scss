@@ -7,30 +7,31 @@
   @media (min-width: $tablet-width) {
     width: 324px;
     padding: 0;
-    padding-top: 30px;
-    padding-bottom: 63px;
-    margin-bottom: 0;
+    padding-top: 69px;
+    margin-bottom: 90px;
   }
 
   @media (min-width: $desktop-width) {
     width: 480px;
-    height: 338px;
     margin: 0;
-    margin-bottom: 87px;
+    margin-bottom: 97px;
+    padding-top: 83px;
   }
 }
 
 .user-data__title {
-  margin: 0;
+  max-width: 280px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 14px;
+    padding-top: 42px;
+    top: -28px;
+    left: 80px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0;
-    padding-top: 28px;
-    padding-left: 15px;
+    padding-top: 0;
+    top: 28px;
+    left: 167px;
   }
 }
 
