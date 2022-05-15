@@ -7,11 +7,17 @@
   height: 100%;
   background-color: $black-opacity;
 
-  &--open {
-    display: flex;
-    z-index: 999;
+  &--hide-failure {
+    display: none;
+    // display: flex;
+  }
+
+  &--hide-success {
+    display: none;
+    // display: flex;
   }
 }
+
 
 .modal__box {
   display: flex;
@@ -29,12 +35,12 @@
   &--failure {
     top: 35%;
     height: 280px;
-    padding: 29px 47px;
+    padding: 27px 47px 35px;
 
     @media (min-width: $tablet-width) {
       width: 400px;
       height: 347px;
-      padding: 58px 62px;
+      padding: 56px 62px 49px;
     }
 
     @media (min-width: $desktop-width) {
@@ -43,37 +49,39 @@
   }
 
   &--success {
-    top: 35%;
+    top: 50%;
     height: 323px;
 
     @media (min-width: $tablet-width) {
       width: 640px;
       height: 347px;
-      justify-content: flex-start;
     }
   }
 }
 
 .modal__content {
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;
+    padding: 54px 35px;
+    max-width: 490px;
+  }
+
   &--failure {
     min-height: 114px;
     margin-bottom: 46px;
 
     @media (min-width: $tablet-width) {
-      margin-bottom: 68px;
+      padding: 0;
     }
   }
 
   &--success {
     min-height: 147px;
     padding: 39px 47px;
-  }
 
-  @media (min-width: $tablet-width) {
-    margin: 0 auto;
-    padding: 52px 35px;
-    padding-bottom: 38px;
-    max-width: 490px;
+    @media (min-width: $tablet-width) {
+      padding: 54px 35px;
+    }
   }
 }
 
@@ -91,7 +99,7 @@
       margin-bottom: 28px;
       max-width: 210px;
       font-size: 30px;
-      line-height: 118%;
+      line-height: 125%;
     }
 
     @media (min-width: $desktop-width) {
@@ -110,10 +118,6 @@
       font-size: 30px;
       line-height: 67%;
     }
-
-    @media (min-width: $desktop-width) {
-      margin-bottom: 50px;
-    }
   }
 }
 
@@ -123,8 +127,16 @@
   line-height: 150%;
   color: $dark;
 
-  @media (min-width: $desktop-width) {
-    line-height: 116%;
+  &--failure {
+    @media (min-width: $desktop-width) {
+      line-height: 125%;
+    }
+  }
+
+  &--success {
+    @media (min-width: $desktop-width) {
+      line-height: 135%;
+    }
   }
 }
 
@@ -132,7 +144,12 @@
   &--success {
     min-height: 98px;
     background-color: $grey-light;
-    padding-top: 42px;
+    padding-top: 20px;
+
+    @media (min-width: $tablet-width) {
+      padding-top: 44px;
+      padding-bottom: 50px;
+    }
   }
 }
 
