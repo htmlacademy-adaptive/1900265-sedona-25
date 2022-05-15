@@ -8,25 +8,23 @@
     width: 100%;
     padding: 0;
     padding-top: 39px;
-    margin-bottom: 45px;
-    position: relative;
+    margin-bottom: 16px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 85px;
+    margin-bottom: 60px;
   }
 }
 
 .showplaces__title {
+  padding-left: 0;
+
   @media (min-width: $tablet-width) {
     max-width: 308px;
-    top: -52px;
-    left: 170px;
   }
 
   @media (min-width: $desktop-width) {
-    top: -83px;
-    left: 325px;
+    padding-right: 6px;
     padding-bottom: 28px;
   }
 }
@@ -54,7 +52,7 @@
 }
 
 .showplaces__item {
-  min-height: 46px;
+  height: 46px;
   margin-bottom: 16px;
 
   &:last-child {
@@ -121,10 +119,6 @@
 .showplaces__label input {
   &:checked + .showplaces__text::after {
     opacity: 1;
-  }
-
-  &:focus + .showplaces__text::before {
-    border: outset $black;
   }
 
   &:hover + .showplaces__text::before {

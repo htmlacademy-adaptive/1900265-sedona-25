@@ -1,25 +1,4 @@
 .modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: none;
-  width: 100%;
-  height: 100%;
-  background-color: $black-opacity;
-
-  &--hide-failure {
-    display: none;
-    // display: flex;
-  }
-
-  &--hide-success {
-    display: none;
-    // display: flex;
-  }
-}
-
-
-.modal__box {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -30,58 +9,36 @@
   font-family: $base-font;
   text-transform: uppercase;
   text-align: center;
-  position: relative;
 
   &--failure {
-    top: 35%;
-    height: 280px;
-    padding: 27px 47px 35px;
+    min-height: 280px;
+    padding: 29px 47px;
 
     @media (min-width: $tablet-width) {
       width: 400px;
-      height: 347px;
-      padding: 56px 62px 49px;
-    }
-
-    @media (min-width: $desktop-width) {
-      padding-top: 55px;
+      min-height: 347px;
     }
   }
 
   &--success {
-    top: 50%;
     height: 323px;
 
     @media (min-width: $tablet-width) {
       width: 640px;
-      height: 347px;
+      min-height: 347px;
     }
   }
 }
 
 .modal__content {
-  @media (min-width: $tablet-width) {
-    margin: 0 auto;
-    padding: 54px 35px;
-    max-width: 490px;
-  }
-
   &--failure {
     min-height: 114px;
     margin-bottom: 46px;
-
-    @media (min-width: $tablet-width) {
-      padding: 0;
-    }
   }
 
   &--success {
     min-height: 147px;
     padding: 39px 47px;
-
-    @media (min-width: $tablet-width) {
-      padding: 54px 35px;
-    }
   }
 }
 
@@ -93,31 +50,11 @@
 
   &--failure {
     margin-bottom: 23px;
-
-    @media (min-width: $tablet-width) {
-      margin: 0 auto;
-      margin-bottom: 28px;
-      max-width: 210px;
-      font-size: 30px;
-      line-height: 125%;
-    }
-
-    @media (min-width: $desktop-width) {
-      line-height: 125%;
-      margin-bottom: 32px;
-    }
   }
 
   &--success {
     margin: 0;
     margin-bottom: 25px;
-
-    @media (min-width: $tablet-width) {
-      margin: 0 auto;
-      margin-bottom: 35px;
-      font-size: 30px;
-      line-height: 67%;
-    }
   }
 }
 
@@ -126,30 +63,13 @@
   font-size: 14px;
   line-height: 150%;
   color: $dark;
-
-  &--failure {
-    @media (min-width: $desktop-width) {
-      line-height: 125%;
-    }
-  }
-
-  &--success {
-    @media (min-width: $desktop-width) {
-      line-height: 135%;
-    }
-  }
 }
 
 .modal__close {
   &--success {
-    min-height: 98px;
+    height: 98px;
     background-color: $grey-light;
     padding-top: 20px;
-
-    @media (min-width: $tablet-width) {
-      padding-top: 44px;
-      padding-bottom: 50px;
-    }
   }
 }
 
@@ -165,7 +85,6 @@
   font-size: 21px;
   line-height: 124%;
   text-transform: uppercase;
-  cursor: pointer;
 
   &:hover {
     background-color: $blue-hover;
@@ -189,11 +108,6 @@
     width: 280px;
     font-size: 18px;
     line-height: 144%;
-
-    @media (min-width: $tablet-width) {
-      font-size: 21px;
-      line-height: 96%;
-    }
 
     @media (min-width: $tablet-width) {
       width: 458px;
