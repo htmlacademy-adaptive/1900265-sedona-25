@@ -91,6 +91,7 @@
 
   @media (min-width: $tablet-width) {
     display: flex;
+    flex-wrap: wrap;
     max-width: 768px;
     padding-top: 0;
     margin-bottom: 0;
